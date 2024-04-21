@@ -6,9 +6,10 @@ import {images} from '../../constants'
 import FormField from '../../components/FormField';
 import { Link } from 'expo-router';
 
-const SignIn = () => {
+const SignUp = () => {
   
   const [form, setForm] = useState({
+    username:"",
     email: "",
     password:""
   })
@@ -25,7 +26,7 @@ const SignIn = () => {
             className="w-[115px] h-[35px]"
           />
 
-          <Text className="text-2xl text-white mt-10 font-psemibold text-semibold">Log in to Auro
+          <Text className="text-2xl text-white mt-10 font-psemibold text-semibold">Sign Up to Aora
           </Text>
 
           <FormField
@@ -50,8 +51,8 @@ const SignIn = () => {
           />
 
           <View className="justify-center pt-5 flex-row gap-2">
-            <Text className="text-lg font-pregular text-gray-100">Dont have an account?</Text>
-            <Link href="/sign-up" className='font-psemibold text-lg text-secondary'>Sign up</Link>
+            <Text className="text-lg font-pregular text-gray-100">Already have an account?</Text>
+            <Link href="/sign-in" className='font-psemibold text-lg text-secondary'>Sign In</Link>
           </View>
 
         </View>
@@ -60,4 +61,4 @@ const SignIn = () => {
   )
 }
 
-export default SignIn
+export default SignUp
