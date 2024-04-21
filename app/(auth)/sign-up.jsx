@@ -28,7 +28,12 @@ const SignUp = () => {
 
           <Text className="text-2xl text-white mt-10 font-psemibold text-semibold">Sign Up to Aora
           </Text>
-
+          <FormField
+            title="Username"
+            value={form.username}
+            handleChangeText={(e) => setForm({ ...form, username: e })}
+            otherStyles="mt-10"
+          />
           <FormField
             title="Email"
             value={form.email}
