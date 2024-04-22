@@ -44,7 +44,7 @@ const Profile = () => {
               <Image source={{uri:user?.avatar}} className="w-[90%] h-[90%] rounded-lg" resizeMode='cover'/>
             </View>
             <InfoBox
-              title={user?.username}
+              title={user?user.username:"user"}
               containerStyles="mt-5"
               titleStyles="text-lg"
             />
@@ -57,7 +57,7 @@ const Profile = () => {
                 titleStyles="text-xl"
               />
               <InfoBox
-                title="1.2k"
+                title={user?"1.2k":"0"}
                 subtitle="Followers"
                 titleStyles="text-xl"
               />
